@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
-import './App.scss';
+import React, { Component } from "react";
+import SimpleForm from "./components/simpleForm";
+import "./App.scss";
 
 export default class App extends Component {
-    render() {
-        return (
-            <div>Hello world!</div>
-        )
-    }
+  render() {
+    return <SimpleForm />;
+  }
 }
