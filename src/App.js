@@ -1,9 +1,15 @@
 import React, { Component } from "react";
-import SimpleForm from "./components/simpleForm";
+import HookForm from "./components/hookForm/hookForm.component";
 import "./App.scss";
 
 export default class App extends Component {
+
   render() {
-    return <SimpleForm />;
+    return (
+      <div>
+        <h2>Simple Form</h2>
+        <HookForm />
+      </div>
+    );
   }
 }
