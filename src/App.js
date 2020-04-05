@@ -1,15 +1,30 @@
 import React, { Component } from "react";
-import HookForm from "./components/hookForm/hookForm.component";
-import "./App.scss";
+import LoginForm from "./components/loginForm/loginForm.component";
+import { Grid, Row, Col } from "react-flexbox-grid";
 
-export default class App extends Component {  
-  
+import "./App.scss";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+export default class App extends Component {
   render() {
     return (
-      <div>
-        <h2>Login</h2>
-        <HookForm />
-      </div>
+      <Grid fluid className="mt-5">
+        <Row center="xs">
+          <Col>
+            <h2>Login</h2>
+          </Col>
+        </Row>
+        <Row center="xs">
+          <Col>
+            <p>Complete the form below please</p>
+          </Col>
+        </Row>
+        <Row center="xs" className="mt-3">
+          <Col>
+            <LoginForm />
+          </Col>
+        </Row>
+      </Grid>
     );
   }
 }
