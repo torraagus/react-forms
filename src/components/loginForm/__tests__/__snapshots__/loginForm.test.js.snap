@@ -1,41 +1,81 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`matches snapshot 1`] = `
-<div>
-  <form
-    data-testid="form"
-    onSubmit={[Function]}
+<div
+  className="container-fluid"
+>
+  <div
+    className="row center-xs"
   >
-    <input
-      data-testid="username"
-      name="username"
-      placeholder="Email..."
-    />
-    <br />
-    <input
-      data-testid="password"
-      name="password"
-      placeholder="Password..."
-      type="password"
-    />
-    <br />
-    <input
-      defaultChecked={true}
-      id="rememberMe"
-      name="rememberMe"
-      type="checkbox"
-    />
-    <label
-      htmlFor="rememberMe"
+    <div
+      className=""
     >
-       Remember me
-    </label>
-    <br />
-    <br />
-    <input
-      type="submit"
-      value="Send"
+      <form
+        className=""
+        data-testid="form"
+        onSubmit={[Function]}
+      >
+        <div
+          className="form-group"
+        >
+          <input
+            className="form-control"
+            data-testid="username"
+            id="formBasicEmail"
+            name="username"
+            placeholder="Enter email"
+            type="email"
+          />
+          <small
+            className="text-muted form-text"
+          />
+        </div>
+        <div
+          className="form-group"
+        >
+          <input
+            className="form-control"
+            data-testid="password"
+            id="formBasicPassword"
+            name="password"
+            placeholder="Enter password"
+            type="password"
+          />
+          <small
+            className="text-muted form-text"
+          />
+        </div>
+        <input
+          defaultChecked={true}
+          id="rememberMe"
+          name="rememberMe"
+          type="checkbox"
+        />
+        <label
+          className="ml-2"
+          htmlFor="rememberMe"
+        >
+          Remember me
+        </label>
+        <br />
+        <br />
+        <button
+          className="btn btn-primary"
+          disabled={false}
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+  <br />
+  <div
+    className="row"
+  >
+    <div
+      className=""
     />
-  </form>
+  </div>
 </div>
 `;
