@@ -1,20 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`matches snapshot 1`] = `
-<form
-  data-testid="form"
-  onSubmit={[Function]}
->
-  <input
-    data-testid="example"
-    name="example"
-    placeholder="Name..."
-  />
-  <br />
-  <br />
-  <input
-    data-testid="submit"
-    type="submit"
-  />
-</form>
+<div>
+  <form
+    data-testid="form"
+    onSubmit={[Function]}
+  >
+    <input
+      data-testid="username"
+      name="username"
+      placeholder="Username..."
+    />
+    <br />
+    <input
+      data-testid="password"
+      name="password"
+      placeholder="Password..."
+      type="password"
+    />
+    <br />
+    <input
+      type="submit"
+      value="Send"
+    />
+  </form>
+</div>
 `;

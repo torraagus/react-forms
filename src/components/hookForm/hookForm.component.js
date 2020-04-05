@@ -3,36 +3,39 @@ import { useForm } from "react-hook-form";
 
 export default function HookForm() {
   const { register, handleSubmit, watch, errors } = useForm();
-  const onSubmit = data => {
+  const onSubmit = (data) => {
     console.log(data);
   };
 
   return (
-    /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
-    <form data-testid="form" onSubmit={handleSubmit(onSubmit)}>
-      {/* register your input into the hook by invoking the "register" function */}
-      <input
-        placeholder="Name..."
-        data-testid="example"
-        name="example"
-        ref={register({ required: true })}
-      />
-      <br />
-      
-      <br />
-      {errors.example && (
-        <>
-          <span data-testid="error">This field is required</span>
-          <br />
-        </>
-      )}
-      {/*errors.example2 && (
-        <>
-          <span data-testid="error2">This field #2 is required</span>
-          <br />
-        </>
-      )*/}
-      <input data-testid="submit" type="submit" />
-    </form>
+    <div>
+      <form data-testid="form" onSubmit={handleSubmit(onSubmit)}>
+        <input
+          placeholder="Username..."
+          data-testid="username"
+          name="username"
+          ref={register({ required: true })}
+        />
+        {errors.username &&
+          errors.username.type === "required" &&
+          "The username field is required"}
+        <br />
+        <input
+          placeholder="Password..."
+          data-testid="password"
+          name="password"
+          type="password"
+          ref={register({ required: true, minLength: 8 })}
+        />
+        {errors.password &&
+          errors.password.type === "required" &&
+          "The password field is required"}
+        {errors.password &&
+          errors.password.type === "minLength" &&
+          "The password must have at least 8 characters"}
+        <br />
+        <input type="submit" value="Send" />
+      </form>
+    </div>
   );
 }

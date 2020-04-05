@@ -20,16 +20,40 @@ it("matches snapshot", () => {
   expect(tree).toMatchSnapshot();
 });
 
-test("if form was correctly submited when no errors are present", async () => {
-  const onSubmit = jest.fn();
-  const { getByTestId } = render(<HookForm onSubmit={onSubmit} />);
-  await fireEvent.change(getByTestId("example"), { target: { value: "test" } });
-  expect(getByTestId("example").value).toBe("test");
+test("calls onSubmit with the username and password when submit is clicked", async () => {
+  const { getByTestId } = render(<HookForm />);
+  const user = {username: 'test', password: 'passtest'}
+  
+  await fireEvent.change(getByTestId("username"), { target: { value: user.username } });
+  expect(getByTestId("username").value).toBe(user.username);
+  
+  await fireEvent.change(getByTestId("password"), {
+    target: { value: user.password },
+  });
+  expect(getByTestId("password").value).toBe(user.password);
+  
   await fireEvent.submit(getByTestId("form"));
 });
 
-test("if form was correctly submited when some errors are present", async () => {
+test("shows an error message when submit is clicked and no username is provided", async () => {
   const { getByTestId } = render(<HookForm />);
+
   await fireEvent.submit(getByTestId("form"));
-  expect(getByTestId("error").textContent).toBe("This field is required");
+  expect(getByTestId("username").value).toBe("");
+});
+
+test("shows an error message when submit is clicked and no password is provided", async () => {
+  const { getByTestId } = render(<HookForm />);
+
+  await fireEvent.submit(getByTestId("form"));
+  expect(getByTestId("password").value).toBe("");
+});
+
+test("shows an error message when submit is clicked and the password provided have less than 8 characters", async () => {
+  const { getByTestId } = render(<HookForm />);
+  
+  await fireEvent.change(getByTestId("password"), { target: { value: "pass" } });
+  expect(getByTestId("password").value).toBe("pass");
+  
+  await fireEvent.submit(getByTestId("form"));
 });
