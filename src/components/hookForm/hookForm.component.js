@@ -2,7 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 
 export default function HookForm() {
-  const { register, handleSubmit, watch, errors } = useForm();
+  const { register, handleSubmit, errors, watch, formState } = useForm();
   const onSubmit = (data) => {
     console.log(data);
   };
@@ -34,8 +34,15 @@ export default function HookForm() {
           errors.password.type === "minLength" &&
           "The password must have at least 8 characters"}
         <br />
+        <br />
         <input type="submit" value="Send" />
       </form>
+      {formState.isSubmitted && formState.isValid && (
+        <p>
+          Your data <br />
+          {JSON.stringify(watch(), undefined, 4)}
+        </p>
+      )}
     </div>
   );
 }
