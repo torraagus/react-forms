@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div>
+  <form
+    data-testid="form"
+    onSubmit={[Function]}
+  >
+    <input
+      data-testid="username"
+      name="username"
+      placeholder="Email..."
+    />
+    <br />
+    <input
+      data-testid="password"
+      name="password"
+      placeholder="Password..."
+      type="password"
+    />
+    <br />
+    <input
+      defaultChecked={true}
+      id="rememberMe"
+      name="rememberMe"
+      type="checkbox"
+    />
+    <label
+      htmlFor="rememberMe"
+    >
+       Remember me
+    </label>
+    <br />
+    <br />
+    <input
+      type="submit"
+      value="Send"
+    />
+  </form>
+</div>
+`;
