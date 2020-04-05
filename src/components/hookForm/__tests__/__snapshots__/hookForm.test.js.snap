@@ -19,6 +19,7 @@ exports[`matches snapshot 1`] = `
       type="password"
     />
     <br />
+    <br />
     <input
       type="submit"
       value="Send"
