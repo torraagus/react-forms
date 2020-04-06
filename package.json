@@ -51,6 +51,7 @@
     "react-bootstrap": "^1.0.0",
     "react-flexbox-grid": "^2.1.2",
     "react-hook-form": "^5.2.0",
+    "react-router-dom": "^5.1.2",
     "react-test-renderer": "^16.13.1",
     "sass-loader": "^8.0.2",
     "webpack": "^4.42.1",
