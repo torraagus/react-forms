@@ -16,7 +16,7 @@ module.exports = {
         chunkFilename: isDevelopment ? '[id].js' : '[id].[hash].js',
     },
     devServer: {
-        port: 4321
+        port: 3000
     },
     module: {
         rules: [
