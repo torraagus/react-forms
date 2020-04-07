@@ -2,8 +2,30 @@
 
 exports[`matches snapshot 1`] = `
 <div
-  className="container-fluid"
+  className="mt-5 container-fluid"
 >
+  <div
+    className="row center-xs"
+  >
+    <div
+      className=""
+    >
+      <h2>
+        Login
+      </h2>
+    </div>
+  </div>
+  <div
+    className="row center-xs"
+  >
+    <div
+      className=""
+    >
+      <p>
+        Complete the form below please
+      </p>
+    </div>
+  </div>
   <div
     className="row center-xs"
   >
@@ -71,7 +93,7 @@ exports[`matches snapshot 1`] = `
   </div>
   <br />
   <div
-    className="row"
+    className="row center-xs"
   >
     <div
       className=""
