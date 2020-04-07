@@ -11,14 +11,24 @@ export default function LoginForm() {
   };
 
   return (
-    <Grid fluid>
+    <Grid fluid className="mt-5">
+      <Row center="xs">
+        <Col>
+          <h2>Login</h2>
+        </Col>
+      </Row>
+      <Row center="xs">
+        <Col>
+          <p>Complete the form below please</p>
+        </Col>
+      </Row>
       <Row center="xs">
         <Col>
           <Form data-testid="form" onSubmit={handleSubmit(onSubmit)}>
             <Form.Group controlId="formBasicEmail">
               {/*<Form.Label>Email address</Form.Label>*/}
               <Form.Control
-              data-testid="username"
+                data-testid="username"
                 type="email"
                 placeholder="Enter email"
                 name="username"
@@ -39,7 +49,7 @@ export default function LoginForm() {
             <Form.Group controlId="formBasicPassword">
               {/*<Form.Label>Password</Form.Label>*/}
               <Form.Control
-              data-testid="password"
+                data-testid="password"
                 type="password"
                 placeholder="Enter password"
                 name="password"
@@ -76,12 +86,12 @@ export default function LoginForm() {
         </Col>
       </Row>
       <br />
-      <Row>
+      <Row center="xs">
         <Col>
           {formState.isSubmitted && formState.isValid && (
             <>
               <p>
-                Your credentials in Raw JSON data <br />
+                Form data in Raw JSON data <br />
                 <small>{JSON.stringify(watch(), undefined, 4)}</small>
               </p>
             </>
