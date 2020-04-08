@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="mt-5 container-fluid"
+>
+  <div
+    className="row center-xs"
+  >
+    <div
+      className=""
+    >
+      <h2>
+        Registration
+      </h2>
+    </div>
+  </div>
+  <div
+    className="row center-xs"
+  >
+    <div
+      className=""
+    >
+      <p>
+        Please, complete the form below to create your account
+      </p>
+    </div>
+  </div>
+  <div
+    className="mt-3 row"
+  >
+    <div
+      className="col-xl-offset-4 col-xl-4 col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 col-xs-offset-1 col-xs-10"
+    >
+      <form
+        className=""
+        data-testid="form"
+        onSubmit={[Function]}
+      >
+        <div
+          className="form-group"
+        >
+          <label
+            className="form-label"
+            htmlFor="formBasicUserName"
+          >
+            Username
+          </label>
+          <input
+            className="form-control"
+            data-testid="username"
+            id="formBasicUserName"
+            name="username"
+            placeholder="Enter username"
+            type="text"
+          />
+          <small
+            className="text-muted form-text"
+            data-testid="usernameErrors"
+          />
+        </div>
+        <div
+          className="form-group"
+        >
+          <label
+            className="form-label"
+            htmlFor="formBasicEmail"
+          >
+            Email address
+          </label>
+          <input
+            className="form-control"
+            data-testid="email"
+            id="formBasicEmail"
+            name="email"
+            placeholder="Enter email"
+            type="email"
+          />
+          <small
+            className="text-muted form-text"
+            data-testid="emailErrors"
+          />
+        </div>
+        <div
+          className="form-group"
+        >
+          <label
+            className="form-label"
+            htmlFor="formBasicPassword"
+          >
+            Password
+          </label>
+          <input
+            className="form-control"
+            data-testid="password"
+            id="formBasicPassword"
+            name="password"
+            placeholder="Enter password"
+            type="password"
+          />
+          <small
+            className="text-muted form-text"
+            data-testid="passwordErrors"
+          />
+        </div>
+        <button
+          className="w-100 btn btn-primary btn-sm"
+          disabled={false}
+          type="submit"
+        >
+          Create account
+        </button>
+        <div
+          className="row center-xs"
+        >
+          <div
+            className=""
+          >
+            <br />
+            <small>
+              Al registrarte, aceptas las
+               
+              <a
+                href="#"
+              >
+                Condiciones del Servicio
+              </a>
+               y la
+               
+              <a
+                href="#"
+              >
+                Política de Privacidad.
+              </a>
+            </small>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <br />
+  <div
+    className="row center-xs"
+  >
+    <div
+      className=""
+    />
+  </div>
+</div>
+`;
