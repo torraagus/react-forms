@@ -27,7 +27,7 @@ export default function NavBar() {
               <LinkContainer to="/login">
                 <NavDropdown.Item>Login form</NavDropdown.Item>
               </LinkContainer>
-              <LinkContainer to="/register">
+              <LinkContainer to="/registration">
                 <NavDropdown.Item>Registration form</NavDropdown.Item>
               </LinkContainer>
               <NavDropdown.Divider />
@@ -41,7 +41,7 @@ export default function NavBar() {
         </Navbar.Collapse>
       </Navbar>
       <Switch>
-        <Route exact path="/register" component={RegistrationForm} />
+        <Route exact path="/registration" component={RegistrationForm} />
         <Route exact path="/login" component={LoginForm} />
         <Route exact path="/" component={Home} />
       </Switch>
