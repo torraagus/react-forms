@@ -28,7 +28,7 @@ export default function NavBar() {
                 <NavDropdown.Item>Login form</NavDropdown.Item>
               </LinkContainer>
               <LinkContainer to="/register">
-                <NavDropdown.Item>Register form</NavDropdown.Item>
+                <NavDropdown.Item>Registration form</NavDropdown.Item>
               </LinkContainer>
               <NavDropdown.Divider />
               <NavDropdown.Header>Others</NavDropdown.Header>
