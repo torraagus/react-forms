@@ -28,21 +28,21 @@ export default function LoginForm() {
             <Form.Group controlId="formBasicEmail">
               {/*<Form.Label>Email address</Form.Label>*/}
               <Form.Control
-                data-testid="username"
+                data-testid="email"
                 type="email"
                 placeholder="Enter email"
-                name="username"
+                name="email"
                 ref={register({
                   required: true,
                   pattern: /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/i,
                 })}
               />
-              <Form.Text className="text-muted">
-                {errors.username &&
-                  errors.username.type === "required" &&
-                  "The username field is required"}
-                {errors.username &&
-                  errors.username.type === "pattern" &&
+              <Form.Text data-testid="emailErrors" className="text-muted">
+                {errors.email &&
+                  errors.email.type === "required" &&
+                  "The email field is required"}
+                {errors.email &&
+                  errors.email.type === "pattern" &&
                   "The email format is wrong"}
               </Form.Text>
             </Form.Group>
@@ -58,7 +58,7 @@ export default function LoginForm() {
                   minLength: 8,
                 })}
               />
-              <Form.Text className="text-muted">
+              <Form.Text data-testid="passwordErrors" className="text-muted">
                 {errors.password &&
                   errors.password.type === "required" &&
                   "The password field is required"}
