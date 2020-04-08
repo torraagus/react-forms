@@ -26,11 +26,13 @@ export default function Home() {
         <Col className="m-2">
           <Card style={{ width: "18rem" }}>
             <Card.Body>
-              <Card.Title className="p-0">Login</Card.Title>
+              <Card.Title className="mb-1">Login</Card.Title>
+              <p>
+                <i>(Let registered users enter the site)</i>
+              </p>
               <Card.Text>
-                <u>Objective</u>: <i>Let registered users enter the site.</i><br/><br/>
                 Allow <b>registered users</b> to enter your site by typing their
-                credentials, usually email and password
+                credentials, usually email and password.
               </Card.Text>
               <LinkContainer to="/login">
                 <Button variant="primary" size="sm">
@@ -43,9 +45,11 @@ export default function Home() {
         <Col className="m-2">
           <Card style={{ width: "18rem" }}>
             <Card.Body>
-              <Card.Title className="p-0">Registration</Card.Title>
+              <Card.Title className="mb-1">Registration</Card.Title>
+              <p>
+                <i>(Register new users)</i>
+              </p>
               <Card.Text>
-                <u>Objective</u>: <i>Register new users.</i><br/><br/>
                 This form is used to register <b>new users</b>. When peolple
                 come to your site you can register them with this type of form.
               </Card.Text>
@@ -60,11 +64,11 @@ export default function Home() {
         <Col className="m-2">
           <Card style={{ width: "18rem" }}>
             <Card.Body>
-              <Card.Title>New seller</Card.Title>
-              <Card.Text>
-                <u>Objective</u>: <i>Register new sellers.</i><br/><br/>
-                Form to register a new seller.
-              </Card.Text>
+              <Card.Title className="mb-1">New seller</Card.Title>
+              <p>
+                <i>(Register new sellers)</i>
+              </p>
+              <Card.Text>Form to register a new seller.</Card.Text>
               <LinkContainer to="/new-seller">
                 <Button variant="primary" size="sm">
                   Watch
@@ -76,11 +80,11 @@ export default function Home() {
         <Col className="m-2">
           <Card style={{ width: "18rem" }}>
             <Card.Body>
-              <Card.Title>New delivery</Card.Title>
-              <Card.Text>
-                <u>Objective</u>: <i>Register new deliveries.</i><br/><br/>
-                Form to register a new delivery.
-              </Card.Text>
+              <Card.Title className="mb-1">New delivery</Card.Title>
+              <p>
+                <i>(Register new deliveries)</i>
+              </p>
+              <Card.Text>Form to register a new delivery.</Card.Text>
               <LinkContainer to="/new-delivery">
                 <Button variant="primary" size="sm">
                   Watch
