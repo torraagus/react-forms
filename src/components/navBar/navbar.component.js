@@ -5,7 +5,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { Switch, Route, Link } from "react-router-dom";
 import { LinkContainer, IndexLinkContainer } from "react-router-bootstrap";
 
-import RegisterForm from "../registerForm/registerForm.component";
+import RegistrationForm from "../registrationForm/registrationForm.component";
 import LoginForm from "../loginForm/loginForm.component";
 import Home from "../home/home.component";
 
@@ -41,7 +41,7 @@ export default function NavBar() {
         </Navbar.Collapse>
       </Navbar>
       <Switch>
-        <Route exact path="/register" component={RegisterForm} />
+        <Route exact path="/register" component={RegistrationForm} />
         <Route exact path="/login" component={LoginForm} />
         <Route exact path="/" component={Home} />
       </Switch>
