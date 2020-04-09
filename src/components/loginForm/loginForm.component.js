@@ -22,11 +22,11 @@ export default function LoginForm() {
           <p>Complete the form below please</p>
         </Col>
       </Row>
-      <Row center="xs">
-        <Col>
+      <Row>
+        <Col xlOffset={4} xl={4} lgOffset={4} lg={4} mdOffset={3} md={6} smOffset={2} sm={8} xsOffset={1} xs={10}>
           <Form data-testid="form" onSubmit={handleSubmit(onSubmit)}>
             <Form.Group controlId="formBasicEmail">
-              {/*<Form.Label>Email address</Form.Label>*/}
+              <Form.Label>Email address</Form.Label>
               <Form.Control
                 data-testid="email"
                 type="email"
@@ -47,7 +47,7 @@ export default function LoginForm() {
               </Form.Text>
             </Form.Group>
             <Form.Group controlId="formBasicPassword">
-              {/*<Form.Label>Password</Form.Label>*/}
+              <Form.Label>Password</Form.Label>
               <Form.Control
                 data-testid="password"
                 type="password"
@@ -78,9 +78,8 @@ export default function LoginForm() {
               Remember me
             </label>
             <br />
-            <br />
-            <Button variant="primary" type="submit">
-              Submit
+            <Button className="w-100" size="sm" variant="primary" type="submit">
+              Get in
             </Button>
           </Form>
         </Col>
