@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Grid, Row, Col } from "react-flexbox-grid";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 export default function RegistrationForm() {
+  const [type, setType] = useState('password');
+  const [eyeIcon, setEyeIcon] = useState("far fa-eye");
   const { register, handleSubmit, errors, watch, formState } = useForm();
   const onSubmit = (data) => {
     console.log(data);
@@ -78,16 +80,34 @@ export default function RegistrationForm() {
             </Form.Group>
             <Form.Group controlId="formBasicPassword">
               <Form.Label>Password</Form.Label>
-              <Form.Control
-                data-testid="password"
-                type="password"
-                placeholder="Enter password"
-                name="password"
-                ref={register({
-                  required: true,
-                  minLength: 8,
-                })}
-              />
+              <Row middle="xs">
+                <Col xs={11}>
+                  <Form.Control
+                    data-testid="password"
+                    type={type}
+                    placeholder="Enter password"
+                    name="password"
+                    ref={register({
+                      required: true,
+                      minLength: 8,
+                    })}
+                  />
+                </Col>
+                <Col xs={1} className="pl-0">
+                  <Button
+                    variant="light"
+                    type="button"
+                    size="sm"
+                    className="ml-0"
+                    onClick={() => {
+                      setType(type == 'password' ? 'text' : 'password');
+                      setEyeIcon(type == "password" ? "far fa-eye-slash" : "far fa-eye");
+                    }}
+                  >
+                    <i className={eyeIcon}></i>
+                  </Button>
+                </Col>
+              </Row>
               <Form.Text data-testid="passwordErrors" className="text-muted">
                 {errors.password &&
                   errors.password.type === "required" &&
