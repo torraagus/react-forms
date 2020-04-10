@@ -1,0 +1,279 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+Array [
+  <nav
+    className="navbar navbar-expand-lg navbar-light"
+  >
+    <a
+      className="navbar-brand"
+      href="/"
+      onClick={[Function]}
+    >
+      React-Forms
+    </a>
+    <button
+      aria-controls="basic-navbar-nav"
+      aria-label="Toggle navigation"
+      className="navbar-toggler collapsed"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="navbar-toggler-icon"
+      />
+    </button>
+    <div
+      aria-expanded={null}
+      className="navbar-collapse collapse"
+      id="basic-navbar-nav"
+    >
+      <div
+        className="mr-auto navbar-nav"
+        onKeyDown={[Function]}
+      >
+        <a
+          className="active nav-link"
+          data-rb-event-key="/"
+          href="/"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          style={Object {}}
+        >
+          Home
+        </a>
+        <div
+          className="dropdown nav-item"
+          onKeyDown={[Function]}
+        >
+          <a
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="dropdown-toggle nav-link"
+            data-rb-event-key={null}
+            href="#"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="button"
+          >
+            Pick a form
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>,
+  <div
+    className="mt-5 container-fluid"
+  >
+    <div
+      className="row center-xs"
+    >
+      <div
+        className=""
+      >
+        <h1>
+          React Forms
+        </h1>
+      </div>
+    </div>
+    <div
+      className="row center-xs"
+    >
+      <div
+        className=""
+      >
+        <h4
+          className="text-primary"
+        >
+          A project about forms with react
+        </h4>
+      </div>
+    </div>
+    <div
+      className="mt-5 row center-xs"
+    >
+      <div
+        className=""
+      >
+        <h5
+          className="text-black-75"
+        >
+          List of forms
+        </h5>
+      </div>
+    </div>
+    <div
+      className="mt-3 row center-xs"
+    >
+      <div
+        className="m-2"
+      >
+        <div
+          className="card"
+          style={
+            Object {
+              "width": "18rem",
+            }
+          }
+        >
+          <div
+            className="card-body"
+          >
+            <div
+              className="mb-1 card-title h5"
+            >
+              Login
+            </div>
+            <p>
+              <i>
+                (Let registered users enter the site)
+              </i>
+            </p>
+            <p
+              className="card-text"
+            >
+              Allow 
+              <b>
+                registered users
+              </b>
+               to enter your site by typing their credentials, usually email and password.
+            </p>
+            <a
+              className="btn btn-primary btn-sm"
+              href="/login"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+            >
+              Watch
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        className="m-2"
+      >
+        <div
+          className="card"
+          style={
+            Object {
+              "width": "18rem",
+            }
+          }
+        >
+          <div
+            className="card-body"
+          >
+            <div
+              className="mb-1 card-title h5"
+            >
+              Registration
+            </div>
+            <p>
+              <i>
+                (Register new users)
+              </i>
+            </p>
+            <p
+              className="card-text"
+            >
+              This form is used to register 
+              <b>
+                new users
+              </b>
+              . When peolple come to your site you can register them with this type of form.
+            </p>
+            <a
+              className="btn btn-primary btn-sm"
+              href="/registration"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+            >
+              Watch
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        className="m-2"
+      >
+        <div
+          className="card"
+          style={
+            Object {
+              "width": "18rem",
+            }
+          }
+        >
+          <div
+            className="card-body"
+          >
+            <div
+              className="mb-1 card-title h5"
+            >
+              New seller
+            </div>
+            <p>
+              <i>
+                (Register new sellers)
+              </i>
+            </p>
+            <p
+              className="card-text"
+            >
+              Form to register a new seller.
+            </p>
+            <a
+              className="btn btn-primary btn-sm"
+              href="/new-seller"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+            >
+              Watch
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        className="m-2"
+      >
+        <div
+          className="card"
+          style={
+            Object {
+              "width": "18rem",
+            }
+          }
+        >
+          <div
+            className="card-body"
+          >
+            <div
+              className="mb-1 card-title h5"
+            >
+              New delivery
+            </div>
+            <p>
+              <i>
+                (Register new deliveries)
+              </i>
+            </p>
+            <p
+              className="card-text"
+            >
+              Form to register a new delivery.
+            </p>
+            <a
+              className="btn btn-primary btn-sm"
+              href="/new-delivery"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+            >
+              Watch
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;
