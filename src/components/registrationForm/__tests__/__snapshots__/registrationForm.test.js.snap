@@ -90,14 +90,37 @@ exports[`matches snapshot 1`] = `
           >
             Password
           </label>
-          <input
-            className="form-control"
-            data-testid="password"
-            id="formBasicPassword"
-            name="password"
-            placeholder="Enter password"
-            type="password"
-          />
+          <div
+            className="row middle-xs"
+          >
+            <div
+              className="col-xs-11"
+            >
+              <input
+                className="form-control"
+                data-testid="password"
+                id="formBasicPassword"
+                name="password"
+                placeholder="Enter password"
+                type="password"
+              />
+            </div>
+            <div
+              className="col-xs-1 pl-0"
+            >
+              <button
+                className="ml-0 btn btn-light btn-sm"
+                data-testid="togglePassword"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+              >
+                <i
+                  className="far fa-eye"
+                />
+              </button>
+            </div>
+          </div>
           <small
             className="text-muted form-text"
             data-testid="passwordErrors"
