@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 export default function RegistrationForm() {
-  const [type, setType] = useState('password');
+  const [type, setType] = useState("password");
   const [eyeIcon, setEyeIcon] = useState("far fa-eye");
   const { register, handleSubmit, errors, watch, formState } = useForm();
   const onSubmit = (data) => {
@@ -95,13 +95,16 @@ export default function RegistrationForm() {
                 </Col>
                 <Col xs={1} className="pl-0">
                   <Button
+                    data-testid="togglePassword"
                     variant="light"
                     type="button"
                     size="sm"
                     className="ml-0"
                     onClick={() => {
-                      setType(type == 'password' ? 'text' : 'password');
-                      setEyeIcon(type == "password" ? "far fa-eye-slash" : "far fa-eye");
+                      setType(type == "password" ? "text" : "password");
+                      setEyeIcon(
+                        type == "password" ? "far fa-eye-slash" : "far fa-eye"
+                      );
                     }}
                   >
                     <i className={eyeIcon}></i>
