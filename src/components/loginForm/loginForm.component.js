@@ -76,12 +76,15 @@ export default function LoginForm() {
                 </Col>
                 <Col xs={1} className="pl-0">
                   <Button
+                    data-testid="togglePassword"
                     size="sm"
                     variant="light"
                     type="button"
                     onClick={() => {
                       setType(type == "password" ? "text" : "password");
-                      setEyeIcon(type == "password" ? "far fa-eye-slash" : "far fa-eye");
+                      setEyeIcon(
+                        type == "password" ? "far fa-eye-slash" : "far fa-eye"
+                      );
                     }}
                   >
                     <i className={eyeIcon}></i>
