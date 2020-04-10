@@ -111,3 +111,29 @@ test("shows error messages in each field when submit is clicked after complete t
     "The password must have at least 8 characters"
   );
 });
+
+test("show password when toggle password button is pressed", async () => {
+  const { getByTestId } = render(<RegistrationForm/>);
+
+  await act( async () => {
+    fireEvent.click(getByTestId("togglePassword"));
+  });
+
+  expect(getByTestId("password").type).toBe("text");
+});
+
+test("hide password when toggle password button is pressed", async () => {
+  const { getByTestId } = render(<RegistrationForm/>);
+
+  //show password
+  await act( async () => {
+    fireEvent.click(getByTestId("togglePassword"));
+  });
+
+  //hide password
+  await act( async () => {
+    fireEvent.click(getByTestId("togglePassword"));
+  });
+
+  expect(getByTestId("password").type).toBe("password");
+});
