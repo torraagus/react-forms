@@ -89,3 +89,27 @@ test("shows an error message when submit is clicked and the password provided ha
   });
   expect(getByTestId("passwordErrors").textContent).toBe("The password must have at least 8 characters");
 });
+
+test("shows the password", async () => {
+  const { getByTestId } = render(<LoginForm />);
+
+  await act( async () => {
+    fireEvent.click(getByTestId("togglePassword"));
+  });
+
+  expect(getByTestId("password").type).toBe('text');
+});
+
+test("hide the password", async () => {
+  const { getByTestId } = render(<LoginForm />);
+
+  await act( async () => {
+    fireEvent.click(getByTestId("togglePassword"));
+  });
+
+  await act( async () => {
+    fireEvent.click(getByTestId("togglePassword"));
+  });
+
+  expect(getByTestId("password").type).toBe('password');
+});
