@@ -7,6 +7,7 @@ import { LinkContainer, IndexLinkContainer } from "react-router-bootstrap";
 
 import RegistrationForm from "../registrationForm/registrationForm.component";
 import LoginForm from "../loginForm/loginForm.component";
+import { DeliveryForm as NewDelivery} from "../deliveryForm/deliveryForm.component";
 import Home from "../home/home.component";
 
 export default function NavBar() {
@@ -33,9 +34,9 @@ export default function NavBar() {
               <NavDropdown.Divider />
               <NavDropdown.Header>Others</NavDropdown.Header>
               <NavDropdown.Item href="#action/3.3">New seller</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.4">
-                New delivery
-              </NavDropdown.Item>
+              <LinkContainer to="/new-delivery">
+                <NavDropdown.Item>New delivery</NavDropdown.Item>
+              </LinkContainer>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
@@ -43,6 +44,7 @@ export default function NavBar() {
       <Switch>
         <Route exact path="/registration" component={RegistrationForm} />
         <Route exact path="/login" component={LoginForm} />
+        <Route exact path="/new-delivery" component={NewDelivery} />
         <Route exact path="/" component={Home} />
       </Switch>
     </>
