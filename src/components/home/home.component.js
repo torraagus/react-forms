@@ -64,27 +64,11 @@ export default function Home() {
         <Col className="m-2">
           <Card style={{ width: "18rem" }}>
             <Card.Body>
-              <Card.Title className="mb-1">New seller</Card.Title>
-              <p>
-                <i>(Register new sellers)</i>
-              </p>
-              <Card.Text>Form to register a new seller.</Card.Text>
-              <LinkContainer to="/new-seller">
-                <Button variant="primary" size="sm">
-                  Watch
-                </Button>
-              </LinkContainer>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col className="m-2">
-          <Card style={{ width: "18rem" }}>
-            <Card.Body>
               <Card.Title className="mb-1">New delivery</Card.Title>
               <p>
                 <i>(Register new deliveries)</i>
               </p>
-              <Card.Text>Form to register a new delivery.</Card.Text>
+              <Card.Text>A delivery is a person that delivers orders to clients. Form to register a new delivery.</Card.Text>
               <LinkContainer to="/new-delivery">
                 <Button variant="primary" size="sm">
                   Watch
