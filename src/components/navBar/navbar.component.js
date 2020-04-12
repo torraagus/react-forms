@@ -33,7 +33,6 @@ export default function NavBar() {
               </LinkContainer>
               <NavDropdown.Divider />
               <NavDropdown.Header>Others</NavDropdown.Header>
-              <NavDropdown.Item href="#action/3.3">New seller</NavDropdown.Item>
               <LinkContainer to="/new-delivery">
                 <NavDropdown.Item>New delivery</NavDropdown.Item>
               </LinkContainer>
